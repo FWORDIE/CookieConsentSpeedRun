@@ -152,9 +152,12 @@ h1{
     .roundtime{
         text-align:right;
     }
-    #maintime{
+    .maintime{
         font-size: 4vw;
     }
+}
+.maintime{
+    font-size: 4vw;
 }
 .goodsplit{
     color: $color_green;
@@ -548,3 +551,6 @@ h1{
    
 }
 
+.endbut{
+    margin-top: 0px;
+}

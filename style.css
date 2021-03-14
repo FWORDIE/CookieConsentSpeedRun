@@ -163,7 +163,11 @@ h1 {
   text-align: right;
 }
 
-#maintimediv #maintime {
+#maintimediv .maintime {
+  font-size: 4vw;
+}
+
+.maintime {
   font-size: 4vw;
 }
 
@@ -583,5 +587,9 @@ input:checked ~ .tab-content {
 .button-13 .checkbox:checked + .knobs span {
   left: 4px;
   background-color: #EB4237;
+}
+
+.endbut {
+  margin-top: 0px;
 }
 /*# sourceMappingURL=style.css.map */

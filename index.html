@@ -18,7 +18,7 @@
 					<div id="timediv">
 						<table id="timetable">
 							<tr id="Round1">
-								<th class="roundtitle" colspan="3">Prefrences</th>
+								<th class="roundtitle" colspan="3">Preferences</th>
 								<td class="splittime" colspan="1" id="split1">--.--</td>
 								<td class="roundtime" colspan="2" id="time1">--:--.--</td>
 							</tr>
@@ -55,7 +55,7 @@
 					<div class="controls">
 						<p>Made by <a class="link" href="www.fredwordie.com">Fred Wordie</a> and
 						supported by <a class="link" href="www.bigdatagirl.com">Big Data Girl</a>, the picture book about Big Data for kids & adults.</p>
-						<div id="Controls" class=""><button id="Start" onclick="start()">Start</button> <button id="Round2" onclick="round2()">Round 2</button> <button id="Round3" onclick="round3()">Round 3</button> <button id="End" onclick="end()">End</button> <button id="Clear" onclick="clearStorage()">Clear</button> <button id="Clear" onclick="test()">Test</button></div>
+						<div id="Controls" class="show"><button id="Start" onclick="start()">Start</button> <button id="Round2" onclick="round2()">Round 2</button> <button id="Round3" onclick="round3()">Round 3</button> <button id="End" onclick="end()">End</button> <button id="Clear" onclick="clearStorage()">Clear</button> <button id="Clear" onclick="test()">Test</button></div>
 					</div>
 				</div>
 			</div>
@@ -65,10 +65,9 @@
 				<div class="round1" id="Welcome">
 					<h1 class="roundHeader">Welcome!</h1>
 					<p class="subber">
-						Since GDPR came into our lives, we've all had to struggle with obtaining our basic privacy rights. Pop up by Pop up we have all been honing our skills, learning to read ambiguous buttons and navigate Escher like sets of options. Now is your chance to show what you have learnt.
+						Since GDPR came into our lives, we've all had to struggle with obtaining our basic privacy rights. Pop-up by pop-up we have all been honing our skills, learning to read ambiguous buttons and navigate Escher like sets of options. Now is your chance to show what you have learnt.
 						<br><br>
-						Your task is simple, press start, open your cookie settings, say no to all cookies and then save your settings. This game uses all the text and tricks of a normal cookie consent pop up, so don't blame me if it's too hard.
-					</p>	
+						Your task is simple, press start, open your cookie settings, say no to all cookies and then save your settings. This game uses all the text and tricks of normal cookie consent pop-ups and banners, so don't blame me if it's too hard.					</p>	
 						<a class="round1button type2 btn" onclick="start()">Start</a>
 				</div>
 				<div class="round1 show" id="Round1Box">
@@ -83,8 +82,8 @@
                     <a class="round1button type9 ">Accept All 9</a> -->
 				</div>
 				<div class="round2 show" id="Round2Box">
-					<h1 class="roundHeader">Say no to all Cookies!</h1>
-					<p class="subber"><span id="Remaining">0</span>/15 remaining</p>
+					<h1 class="roundHeader">Level 2: Reject all cookies</h1>
+					<p class="subber">There are <span id="Remaining">0</span>/15 remaining</p>
 					<div class="tabs">
 						<div class="tab">
 							<input id="rd1" name="rd" type="radio"> <label class="tab-label" for="rd1">Marketing</label>
@@ -403,9 +402,9 @@
                     <a class="round1button type9 ">Accept All 9</a> -->
 				</div>
 				<div class="round1 show" id="Finish">
-					<h1 class="roundHeader">You did it!</h1>
-					<p class="subber">and it only took you <span id="finalTime"></span></p>
-					<a class="round1button type2 btn" onclick="restart()">Have another go</a>
+					<h1 class="roundHeader" id="EndTitle">You did it! It only took you </h1>
+					<h1 class="maintime" id="EndUnder"><span id="finalTime"></span></h1>
+					<a class="round1button type2 btn endbut" onclick="restart()">Have another go</a>
 				</div>
 			</div>
 		</div>

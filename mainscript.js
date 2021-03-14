@@ -19,27 +19,28 @@ var lastSplit = [];
 var lastRoundTime = 0;
 var buttons = 12;
 var Going = false;
+var HighScore = false;
 
 
 
 
 // Check for Local PB Split
 for (let i = 0; i < split.length; i++){
-    if(localStorage.getItem("split" + i +"Local") === null){
+    if(sessionStorage.getItem("split" + i +"Local") === null){
         split[i] = Infinity; 
         console.log(split);
     } else{
-        split[i] = localStorage.getItem("split" + i +"Local");
+        split[i] = sessionStorage.getItem("split" + i +"Local");
         console.log(split);
     }
 }
 
 //Check for local PB
-if(localStorage.getItem("pBmsLocal") === null) {
+if(sessionStorage.getItem("pBmsLocal") === null) {
     var pBms = Infinity;
   }
 else{
-      var pBms = localStorage.getItem("pBmsLocal");
+      var pBms = sessionStorage.getItem("pBmsLocal");
       personalBest.textContent = getTimer(pBms);
   }
 
@@ -62,7 +63,7 @@ function start() {
         timer = setInterval(run, 10);
     }
     document.getElementById('Welcome').classList.add("show");
-    loadButtons("Round1Box", "Open Your Cookie Prefrences!", "1");
+    loadButtons("Round1Box", "Level 1: Open your cookie preferences", "1");
 
 }
 }
@@ -135,7 +136,7 @@ function round3() {
     lastSplit[round] = ms - lastSplit[round -1];
     setsplit();
     round ++;
-    loadButtons("Round3Box", "Save Your Cookie Prefrences!", "3");
+    loadButtons("Round3Box", "Level 3: Save your cookie preferences", "3");
 }
 
 //Final Split on end
@@ -173,10 +174,11 @@ function stopTimer() {
 function storeHighScore(){
     if(pBms > ms){
         pBms = ms;
+        HighScore = true; 
         personalBest.textContent = getTimer(ms);
-        localStorage.setItem("pBmsLocal", pBms);
+        sessionStorage.setItem("pBmsLocal", pBms);
         for(let i = 0; i < split.length; i++ ){
-            localStorage.setItem("split" + (i) + "Local", lastSplit[i]);
+            sessionStorage.setItem("split" + (i) + "Local", lastSplit[i]);
             split[i] = lastSplit[i];
         }
     }
@@ -184,7 +186,7 @@ function storeHighScore(){
 
 //Clear Storage
 function clearStorage(){
-    localStorage.clear();
+    sessionStorage.clear();
 }
 
 //Import Copy
@@ -224,6 +226,16 @@ function loadButtons(box, title, numb){
     randomArr(ButtonConArr, "round1Arr");
     randomArr(ButtonProArr, "round1Pro");
     //console.log(round1Pro[0]);
+    // if(numb == "1"){
+    //     var headnumb = Math.floor((Math.random() * copy.Welcome.length) + 1);
+    //     var header = document.createElement("h1");
+    //     header.classList.add('header');
+    //     var randhead = copy.Welcome[headnumb];
+    //     header.innerText = randhead;
+    //     document.getElementById(box).appendChild(header).classList.add("roundHeader");  
+    // } else{
+
+    // };
     var header = document.createElement("h1");
     header.innerText = title;
     document.getElementById(box).appendChild(header).classList.add("roundHeader");
@@ -366,8 +378,15 @@ function resetToggles(num){
 // Round 3
 function restart(){
     document.getElementById('Finish').classList.add("show");
+    var EndTitle = document.getElementById('EndTitle');
+    if(HighScore == true){
+        EndTitle.innerText="You did it and got new Highscore!"
+        console.log("highscore")
+    }
     document.getElementById('Round3Box').innerHTML = "";
     start();
+    HighScore = false; 
+
 }
 
 

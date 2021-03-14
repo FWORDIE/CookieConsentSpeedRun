@@ -12,5 +12,6 @@ let copy = {
     tog3Reset:["Reset All Performance Cookies"],
     round3Con:["Accept Recommended Settings", "Select All and Confirm", "Accept All & Submit", "Accept All", "Select all and continue", "Accept All Cookies", "Close and Accept All", "Allow All", "Approve All Cookies", "Approve All & Save", "Accept Recommended Cookies", "Only Accept Recommended"],
     round3Pro:["Confirm Selection Only","Approve Checked Only","Close","Save cookie settings","Accept only selected","Submit Preferences ","Accept Selected and Continue","Confirm my choices","Save","Save & Exit"],
-    wrong:["Nope, try again", "Wrong, try again", "Try another one", "Try Again"]
+    wrong:["Nope, try again", "Wrong, try again", "Try another one", "Try Again"],
+    Welcome:["This website and its partners process, store and/or access information on a device.", "This website uses cookies and similar technologies", "WE USES COOKIES", "Let us know you agree to cookies", "We use cookies and other tracking technologies to improve your browsing experience on our site.", "This website uses cookies", "We use cookies, which are small text files, to improve your experience on our website and to show you personalised content.", "We use cookies to give you the best experience", "We care about your privacy", "We value your privacy", "Have A Cookie!", "Listen up, people. We use cookies!"]
  }
