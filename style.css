@@ -12,7 +12,7 @@ body, html {
 body {
   background: #F7F5FB;
   font-family: monospace;
-  background: black;
+  background: #577590;
   margin: 0px;
 }
 
@@ -47,7 +47,7 @@ p {
 }
 
 .sidebar .headerbox {
-  background: yellow;
+  background: #7ED26A;
   padding: 5px 15px 5px 15px;
 }
 
@@ -168,7 +168,7 @@ h1 {
 }
 
 .goodsplit {
-  color: yellow;
+  color: #7ED26A;
 }
 
 .badsplit {
@@ -289,7 +289,7 @@ a:active.btn:after {
 }
 
 .type2 {
-  background: yellow;
+  background: #7ED26A;
 }
 
 .type3 {
@@ -306,8 +306,8 @@ a:active.btn:after {
 }
 
 .type6 {
-  color: yellow;
-  border: 3px solid yellow;
+  color: #7ED26A;
+  border: 3px solid #7ED26A;
 }
 
 .type7 {
@@ -576,7 +576,7 @@ input:checked ~ .tab-content {
   width: 39px;
   left: 37px;
   height: 34px;
-  background-color: yellow;
+  background-color: #7ED26A;
   z-index: 2;
 }
 
