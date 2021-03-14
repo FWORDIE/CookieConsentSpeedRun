@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Cookie Policy Speedrun</title>
+	<meta content="Cookie Policy Speedrun Game" name="description">bre
+	<meta content="Fred Wordie" name="author">
+	<link>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="content">
+		<div class="sidebar">
+			<div class="innersidebox">
+				<div class="sidebox headerbox">
+					<h1 id="Title">Cookie Consent Speed.run</h1>
+				</div>
+				<div class="sidebox timerbox">
+					<div id="timediv">
+						<table id="timetable">
+							<tr id="Round1">
+								<th class="roundtitle" colspan="3">Prefrences</th>
+								<td class="splittime" colspan="1" id="split1">--.--</td>
+								<td class="roundtime" colspan="2" id="time1">--:--.--</td>
+							</tr>
+							<tr>
+								<th class="roundtitle" colspan="3">Toggles</th>
+								<td class="splittime" colspan="1" id="split2">--.--</td>
+								<td class="roundtime" colspan="2" id="time2">--:--.--</td>
+							</tr>
+							<tr>
+								<th class="roundtitle" colspan="3">Save</th>
+								<td class="splittime" colspan="1" id="split3">--.--</td>
+								<td class="roundtime" colspan="2" id="time3">--:--.--</td>
+							</tr>
+							<tr>
+								<td colspan="6">
+									<div id="maintimediv">
+										<p class="maintime"><span id="maintime">00:00:00</span></p>
+										<p class="roundtime"><span id="roundtime">-</span></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<p class="lasttime">LT: <span id="lasttime">--:--.--</span></p>
+								</td>
+								<td colspan="3">
+									<p class="personalbest">PB: <span id="personalbest">--:--.--</span></p>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="sidebox aboutbox">
+					<div class="controls">
+						<p>Made by <a class="link" href="www.fredwordie.com">Fred Wordie</a> and
+						supported by <a class="link" href="www.bigdatagirl.com">Big Data Girl</a>, the picture book about Big Data for kids & adults.</p>
+						<div id="Controls" class=""><button id="Start" onclick="start()">Start</button> <button id="Round2" onclick="round2()">Round 2</button> <button id="Round3" onclick="round3()">Round 3</button> <button id="End" onclick="end()">End</button> <button id="Clear" onclick="clearStorage()">Clear</button> <button id="Clear" onclick="test()">Test</button></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="gamewrapper">
+			<div class="innergamebox">
+				<div class="round1" id="Welcome">
+					<h1 class="roundHeader">Welcome!</h1>
+					<p class="subber">
+						Since GDPR came into our lives, we've all had to struggle with obtaining our basic privacy rights. Pop up by Pop up we have all been honing our skills, learning to read ambiguous buttons and navigate Escher like sets of options. Now is your chance to show what you have learnt.
+						<br><br>
+						Your task is simple, press start, open your cookie settings, say no to all cookies and then save your settings. This game uses all the text and tricks of a normal cookie consent pop up, so don't blame me if it's too hard.
+					</p>	
+						<a class="round1button type2 btn" onclick="start()">Start</a>
+				</div>
+				<div class="round1 show" id="Round1Box">
+					<!-- <a class="round1button type1 btn">Accept All 1</a>
+                    <a class="round1button type2 btn">Accept All 2</a>
+                    <a class="round1button type3 btn">Accept All 3</a>
+                    <a class="round1button type4 btn">Accept All 4</a>
+                    <a class="round1button type5 btn">Accept All 5</a>
+                    <a class="round1button type6 btn">Accept All 6</a>
+                    <a class="round1button type7 btn">Accept All 7</a>
+                    <a class="round1button type8 ">Accept All 8</a>
+                    <a class="round1button type9 ">Accept All 9</a> -->
+				</div>
+				<div class="round2 show" id="Round2Box">
+					<h1 class="roundHeader">Say no to all Cookies!</h1>
+					<p class="subber"><span id="Remaining">0</span>/15 remaining</p>
+					<div class="tabs">
+						<div class="tab">
+							<input id="rd1" name="rd" type="radio"> <label class="tab-label" for="rd1">Marketing</label>
+							<div class="tab-content">
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_1_1"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_1_1" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_1_2"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_1_2" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_1_3"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_1_3" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_1_4"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_1_4" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_1_5"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_1_5" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_1_6"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_1_6" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab">
+							<input id="rd3" name="rd" type="radio"> <label class="tab-label" for="rd3">Performance</label>
+							<div class="tab-content">
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_2_1"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_2_1" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_2_2"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_2_2" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_2_3"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_2_3" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_2_4"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_2_4" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_2_5"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_2_5" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_2_6"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_2_6" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab">
+							<input id="rd2" name="rd" type="radio"> <label class="tab-label" for="rd2">Statistics</label>
+							<div class="tab-content">
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_3_1"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_3_1" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_3_2"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_3_2" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_3_3"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_3_3" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_3_4"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_3_4" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_3_5"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_3_5" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabItem">
+									<div class="words">
+										<span id="wrd_3_6"> </span>
+									</div>
+									<div class="toggle-button-cover">
+										<div class="button-cover">
+											<div class="button b2 button-13">
+												<input class="checkbox"  id="btn_3_6" type="checkbox">
+												<div class="knobs">
+													<span></span>
+												</div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="round1 show" id="Round3Box">
+					<!-- <a class="round1button type1 btn">Accept All 1</a>
+                    <a class="round1button type2 btn">Accept All 2</a>
+                    <a class="round1button type3 btn">Accept All 3</a>
+                    <a class="round1button type4 btn">Accept All 4</a>
+                    <a class="round1button type5 btn">Accept All 5</a>
+                    <a class="round1button type6 btn">Accept All 6</a>
+                    <a class="round1button type7 btn">Accept All 7</a>
+                    <a class="round1button type8 ">Accept All 8</a>
+                    <a class="round1button type9 ">Accept All 9</a> -->
+				</div>
+				<div class="round1 show" id="Finish">
+					<h1 class="roundHeader">You did it!</h1>
+					<p class="subber">and it only took you <span id="finalTime"></span></p>
+					<a class="round1button type2 btn" onclick="restart()">Have another go</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="copy.js">
+	</script> 
+	<script src="/mainscript.js">
+	</script>
+</body>
+</html>
