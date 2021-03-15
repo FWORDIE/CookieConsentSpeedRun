@@ -4,14 +4,26 @@ $color_grey: #909090;
 $color_red: #EB4237;
 //$color_green: pink;
 $color_green: #7ED26A;
-
 $color_yellow: #F3F2EE;
 $color_blue: #577590;
+
+@font-face {
+    font-family: 'IBMPlexMono'; /*a name to be used later*/
+    src: url('/font/IBMPlexMono-Regular.woff2') format("woff2"); /*URL to font*/
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'IBMPlexMono'; /*a name to be used later*/
+    src: url('/font/IBMPlexMono-Bold.woff2') format("woff2"); /*URL to font*/
+    font-weight: bold;
+}
 body,
 html {
 	margin: 0;
 	padding: 0;
 	font-size: 1vw;
+    font-family: 'IBMPlexMono', monospace;
+    font-weight: normal;
 }
 
 * {
@@ -20,7 +32,6 @@ html {
 
 body {
 	background: $color_white;
-	font-family: monospace;
 	background: $color_blue;
 	margin: 0px;
 }
@@ -47,7 +58,6 @@ p {
 		border: 5px solid $color_black;
 		background: $color_yellow;
 		margin: 25px 0 25px 0;
-		font-size: 1.2rem;
 	}
 	.headerbox {
 		background: $color_green;
