@@ -604,7 +604,7 @@ input:checked ~ .tab-content {
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   body, html {
     font-size: 3vw;
   }
