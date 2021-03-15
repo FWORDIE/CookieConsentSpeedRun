@@ -600,7 +600,7 @@ input:checked ~ .tab-content {
   margin-top: 0px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 450px) {
   /* For mobile phones: */
   .content {
     -webkit-box-orient: vertical;
