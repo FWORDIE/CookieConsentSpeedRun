@@ -612,10 +612,6 @@ input:checked ~ .tab-content {
   background-color: #EB4237;
 }
 
-.endbut {
-  margin-top: 0px;
-}
-
 .mobileonly {
   display: none;
 }

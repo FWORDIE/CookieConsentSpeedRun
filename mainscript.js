@@ -51,17 +51,11 @@ function start() {
     Going = true;
     lastRoundTime = 0;
     round = 0;
-    for(let i = 0; i < 3; i++){
-        // cleararea = document.getElementById("round" + i + "Timer");
-        // cleararea.textContent = '--:--.--';
-        // cleararea = document.getElementById("round" + i + "Split");
-        // cleararea.textContent = '--.--';
-        eval(cleararea = eval("round" + i + "Timer"));
-        cleararea.textContent = '--:--.--';
-        eval(cleararea = eval("round" + i + "Split"));
-        cleararea.textContent = '--.--';
-        eval("round" + i + "Split").classList.remove("goodsplit");
-        eval("round" + i + "Split").classList.remove("badsplit");
+    for(let i = 1; i <= 3; i++){
+        document.getElementById('time'+i).textContent = '--:--.--';
+        document.getElementById('split'+i).textContent = '--.--';
+        document.getElementById('split'+i).classList.remove("badsplit");
+        document.getElementById('split'+i).classList.remove("goodsplit");
     }
     ms = 0;
     if(!timer) {
