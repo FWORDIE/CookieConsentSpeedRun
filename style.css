@@ -48,7 +48,7 @@ p {
 }
 
 .sidebar .headerbox {
-  background: pink;
+  background: purple;
   padding: 5px 15px 5px 15px;
 }
 
@@ -174,7 +174,7 @@ h1 {
 }
 
 .goodsplit {
-  color: pink;
+  color: purple;
 }
 
 .badsplit {
@@ -295,7 +295,7 @@ a:active.btn:after {
 }
 
 .type2 {
-  background: pink;
+  background: purple;
 }
 
 .type3 {
@@ -312,8 +312,8 @@ a:active.btn:after {
 }
 
 .type6 {
-  color: pink;
-  border: 3px solid pink;
+  color: purple;
+  border: 3px solid purple;
 }
 
 .type7 {
@@ -587,7 +587,7 @@ input:checked ~ .tab-content {
   width: 39px;
   left: 37px;
   height: 34px;
-  background-color: pink;
+  background-color: purple;
   z-index: 2;
 }
 
