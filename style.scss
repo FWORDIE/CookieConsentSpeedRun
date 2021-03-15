@@ -538,8 +538,6 @@ and (max-width: 500px)
         font-size: 3vw;
     }
 
-
-    /* For mobile phones: */
    .content{
        flex-direction: column;
        align-items: center;
@@ -565,6 +563,7 @@ and (max-width: 500px)
        width: 100%;
        padding: 15px;
        padding-top: 0px;
+       padding-bottom: 100px;
 
    }
 

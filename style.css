@@ -608,7 +608,6 @@ input:checked ~ .tab-content {
   body, html {
     font-size: 3vw;
   }
-  /* For mobile phones: */
   .content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -640,6 +639,7 @@ input:checked ~ .tab-content {
     width: 100%;
     padding: 15px;
     padding-top: 0px;
+    padding-bottom: 100px;
   }
   .mobileonly {
     display: block;
