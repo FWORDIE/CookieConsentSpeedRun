@@ -48,7 +48,7 @@ p {
 }
 
 .sidebar .headerbox {
-  background: #7ED26A;
+  background: pink;
   padding: 5px 15px 5px 15px;
 }
 
@@ -174,7 +174,7 @@ h1 {
 }
 
 .goodsplit {
-  color: #7ED26A;
+  color: pink;
 }
 
 .badsplit {
@@ -295,7 +295,7 @@ a:active.btn:after {
 }
 
 .type2 {
-  background: #7ED26A;
+  background: pink;
 }
 
 .type3 {
@@ -312,8 +312,8 @@ a:active.btn:after {
 }
 
 .type6 {
-  color: #7ED26A;
-  border: 3px solid #7ED26A;
+  color: pink;
+  border: 3px solid pink;
 }
 
 .type7 {
@@ -587,7 +587,7 @@ input:checked ~ .tab-content {
   width: 39px;
   left: 37px;
   height: 34px;
-  background-color: #7ED26A;
+  background-color: pink;
   z-index: 2;
 }
 
