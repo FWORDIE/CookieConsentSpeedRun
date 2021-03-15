@@ -600,6 +600,10 @@ input:checked ~ .tab-content {
   margin-top: 0px;
 }
 
+.mobileonly {
+  display: none;
+}
+
 @media screen and (max-width: 500px) {
   body, html {
     font-size: 3vw;
@@ -636,6 +640,31 @@ input:checked ~ .tab-content {
     width: 100%;
     padding: 15px;
     padding-top: 0px;
+  }
+  .mobileonly {
+    display: block;
+  }
+  #maintimedivmobile {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    border: solid 5px #272727;
+    background-color: #F3F2EE;
+    padding: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 3rem;
+  }
+  #maintimedivmobile .maintimemobile {
+    margin: 0px;
+    line-height: 3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

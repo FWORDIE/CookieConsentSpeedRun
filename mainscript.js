@@ -3,6 +3,7 @@
 var ms = 0, s = 0, m = 0;
 var timer;
 var mainTimer = document.querySelector('#maintime');
+var mainTimerMob = document.querySelector('#maintimemobile');
 var roundTime = document.querySelector('#roundtime');
 var round0Timer = document.querySelector('#time1');
 var round1Timer = document.querySelector('#time2');
@@ -72,6 +73,7 @@ function start() {
 function run() {
     ms++;
     mainTimer.textContent = getTimer(ms);
+    mainTimerMob.textContent = getTimer(ms);
     eval(roundarea = eval("round" + (round) + "Timer"));
     roundarea.textContent = getTimer(ms);
     var tt = 50;

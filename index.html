@@ -55,8 +55,8 @@
 				</div>
 				<div class="sidebox aboutbox">
 					<div class="controls">
-						<p>Made by <a class="link" href="www.fredwordie.com">Fred Wordie</a> and
-						supported by <a class="link" href="www.bigdatagirl.com">Big Data Girl</a>, the picture book about Big Data for kids & adults.</p>
+						<p>Made by <a class="link" href="https://www.fredwordie.com">Fred Wordie</a> and
+						supported by <a class="link" href="https://www.bigdatagirl.com">Big Data Girl</a>, the picture book about Big Data for kids & adults.</p>
 						<div id="Controls" class="show"><button id="Start" onclick="start()">Start</button> <button id="Round2" onclick="round2()">Round 2</button> <button id="Round3" onclick="round3()">Round 3</button> <button id="End" onclick="end()">End</button> <button id="Clear" onclick="clearStorage()">Clear</button> <button id="Clear" onclick="test()">Test</button></div>
 					</div>
 				</div>
@@ -67,21 +67,18 @@
 				<div class="round1" id="Welcome">
 					<h1 class="roundHeader">Welcome!</h1>
 					<p class="subber">
+
 						Since GDPR came into our lives, we've all had to struggle with obtaining our basic privacy rights. Pop-up by pop-up we have all been honing our skills, learning to read ambiguous buttons and navigate Escher like sets of options. Now is your chance to show what you have learnt.
 						<br><br>
-						Your task is simple, press start, open your cookie settings, say no to all cookies and then save your settings. This game uses all the text and tricks of normal cookie consent pop-ups and banners, so don't blame me if it's too hard.					</p>	
+						Your task is simple, press start, open your cookie settings, say no to all cookies and then save your settings. This game uses all the text and tricks of normal cookie consent pop-ups and banners, so don't blame me if it's too hard.
+					<span class="mobileonly">
+						<br><br>
+						p.s. Like all cookie Pop-ups, this is best experienced on desktop.											
+					</span>
+					</p>	
 						<a class="round1button type2 btn" onclick="start()">Start</a>
 				</div>
 				<div class="round1 show" id="Round1Box">
-					<!-- <a class="round1button type1 btn">Accept All 1</a>
-                    <a class="round1button type2 btn">Accept All 2</a>
-                    <a class="round1button type3 btn">Accept All 3</a>
-                    <a class="round1button type4 btn">Accept All 4</a>
-                    <a class="round1button type5 btn">Accept All 5</a>
-                    <a class="round1button type6 btn">Accept All 6</a>
-                    <a class="round1button type7 btn">Accept All 7</a>
-                    <a class="round1button type8 ">Accept All 8</a>
-                    <a class="round1button type9 ">Accept All 9</a> -->
 				</div>
 				<div class="round2 show" id="Round2Box">
 					<h1 class="roundHeader">Level 2: Reject all cookies</h1>
@@ -409,6 +406,9 @@
 					<a class="round1button type2 btn endbut" onclick="restart()">Have another go</a>
 				</div>
 			</div>
+		</div>
+		<div id="maintimedivmobile" class="mobileonly">
+			<p class="maintimemobile"><span id="maintimemobile">00:00:00</span></p>
 		</div>
 	</div>
 	<script src="copy.js">

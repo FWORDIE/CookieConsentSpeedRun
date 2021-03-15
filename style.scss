@@ -525,6 +525,10 @@ input:checked {
 	margin-top: 0px;
 }
 
+.mobileonly{
+    display: none;
+}
+
 @media screen
  
 and (max-width: 500px)
@@ -563,5 +567,27 @@ and (max-width: 500px)
        padding-top: 0px;
 
    }
+
+   .mobileonly{
+    display: block;
+    }
+
+    #maintimedivmobile{
+        position: fixed;
+        bottom:0px;
+        width: 100%;
+        border: solid 5px $color_black;
+        background-color: $color_yellow;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        font-size: 3rem;
+
+        .maintimemobile{
+            margin: 0px;
+            line-height: 3rem;
+        }
+    }
 
   }
