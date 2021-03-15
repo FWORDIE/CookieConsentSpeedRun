@@ -2,8 +2,8 @@ $color_white: #F7F5FB;
 $color_black: #272727;
 $color_grey: #909090;
 $color_red: #EB4237;
-$color_green: pink;
-//$color_green: #7ED26A;
+//$color_green: pink;
+$color_green: #7ED26A;
 
 $color_yellow: #F3F2EE;
 $color_blue: #577590;
@@ -525,7 +525,7 @@ input:checked {
 	margin-top: 0px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 900px) {
     /* For mobile phones: */
    .content{
        flex-direction: column;
