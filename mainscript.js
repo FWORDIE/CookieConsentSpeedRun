@@ -52,6 +52,10 @@ function start() {
     lastRoundTime = 0;
     round = 0;
     for(let i = 0; i < 3; i++){
+        // cleararea = document.getElementById("round" + i + "Timer");
+        // cleararea.textContent = '--:--.--';
+        // cleararea = document.getElementById("round" + i + "Split");
+        // cleararea.textContent = '--.--';
         eval(cleararea = eval("round" + i + "Timer"));
         cleararea.textContent = '--:--.--';
         eval(cleararea = eval("round" + i + "Split"));
@@ -295,9 +299,8 @@ function Gentoggles(){
     round1Box.innerHTML = ""; 
     document.getElementById("Round1Box").classList.add("show");
     document.getElementById("Round2Box").classList.remove("show");
-    document.getElementById("rd1").checked = false;
+    document.getElementById("rd1").checked = true;
     document.getElementById("rd2").checked = false;
-    document.getElementById("rd3").checked = false;
     document.getElementById("rd3").checked = false;
 
     let alltoggles = document.getElementsByClassName('checkbox');
@@ -361,6 +364,7 @@ function checkToggles(){
     console.log(toggleCount);
     if(toggleCount == 0){
         console.log("Round Over");
+        document.getElementById("Round2Box").classList.add("show");
         round3();
     }
 }
