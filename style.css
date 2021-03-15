@@ -601,6 +601,9 @@ input:checked ~ .tab-content {
 }
 
 @media screen and (max-width: 500px) {
+  body, html {
+    font-size: 3vw;
+  }
   /* For mobile phones: */
   .content {
     -webkit-box-orient: vertical;
