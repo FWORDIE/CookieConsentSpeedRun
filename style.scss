@@ -3,554 +3,554 @@ $color_black: #272727;
 $color_grey: #909090;
 $color_red: #EB4237;
 $color_green: #7ED26A;
-
 $color_yellow: #F3F2EE;
 $color_blue: #577590;
-
-
-body,html {
-    margin: 0;
-    padding: 0;
-    font-size: 1vw;
-
+body,
+html {
+	margin: 0;
+	padding: 0;
+	font-size: 1vw;
 }
+
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    background: $color_white;
-    font-family: monospace;
-    background: $color_blue;
-    margin: 0px;
+	background: $color_white;
+	font-family: monospace;
+	background: $color_blue;
+	margin: 0px;
 }
 
-.content{
-    width: 100%;
-    height:100%;
-    color: $color_black;
-    position: relative;
-    display: flex;
-}
-p{
-    line-height: 1.5rem;
-}
-.sidebar{
-    height: 100px;
-    width:40%;
-    position: sticky;
-    top: 0px;
-    padding: 25px 25px 25px 50px;
-        .sidebox{
-            border: 5px solid $color_black;
-            background: $color_yellow;
-            margin: 25px 0 25px 0;
-            font-size: 1.2rem;
-        }
-        .headerbox{
-            background: $color_green;
-            padding: 5px 15px 5px 15px;
-        }
-        .timerbox{
-            border: none;
-        }
-    
+.content {
+	width: 100%;
+	height: 100%;
+	color: $color_black;
+	position: relative;
+	display: flex;
 }
 
-h1{
-    font-size: 1.6rem;
+p {
+	line-height: 1.5rem;
 }
 
-.subber{
-    text-align: center;
-    width: 100%;
+.sidebar {
+	height: 100px;
+	width: 40%;
+	position: sticky;
+	top: 0px;
+	padding: 25px 25px 25px 50px;
+	.sidebox {
+		border: 5px solid $color_black;
+		background: $color_yellow;
+		margin: 25px 0 25px 0;
+		font-size: 1.2rem;
+	}
+	.headerbox {
+		background: $color_green;
+		padding: 5px 15px 5px 15px;
+	}
+	.timerbox {
+		border: none;
+	}
 }
 
-.roundHeader{
-    width:100%;
-    text-align: center;
-    margin-bottom: 15px;
+h1 {
+	font-size: 1.6rem;
 }
 
-.controls{
-    padding: 5px 15px 5px 15px;
+.subber {
+	text-align: center;
+	width: 100%;
 }
 
-.link{
-    color: $color_red;
+.roundHeader {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 15px;
 }
 
-
-.gamewrapper{
-    width: calc(65%);
-    min-height: 100%;
-    padding: 50px 50px 50px 25px;
-    .innergamebox{
-        height:100%;
-        background: $color_yellow;
-        border: solid 5px $color_black;
-  
-    }
+.controls {
+	padding: 5px 15px 5px 15px;
 }
 
-.show{
-    display: none !important;
-    padding: 0px !important;
+.link {
+	color: $color_red;
 }
 
-#timetable{
-    width:100%;
-    border-collapse: collapse;
-    border: solid 5px $color_black;
-    td{
-        margin:0px;
-        border: solid 3px $color_black;
-        padding: 15px 15px 15px 15px;
-    }
-    th{
-        margin:0px;
-        border: solid 3px $color_black;
-        padding: 5px 15px 5px 15px;
-
-    }
-    .roundtitle{
-        text-align: left;
-        width:50%;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-    .roundtime{
-        margin-top: 20px;
-        text-align: right;
-        font-size: 1.2rem;
-        white-space: nowrap;
-    }
-    .splittime{
-        text-align:center;
-        font-weight: bold;
-        font-size: 0.8rem;
-        width:22%;
-        white-space: nowrap;
-
-    }
+.gamewrapper {
+	width: calc(65%);
+	min-height: 100%;
+	padding: 50px 50px 50px 25px;
+	.innergamebox {
+		height: 100%;
+		background: $color_yellow;
+		border: solid 5px $color_black;
+	}
 }
 
-.lasttime, .personalbest{
-    font-size: 1.2rem;
-    text-align: center;
-    white-space: nowrap;
+.show {
+	display: none !important;
+	padding: 0px !important;
 }
 
-#maintimediv{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;   
-    .maintime{
-        text-align:right;
-        margin-bottom: 0px;
-    }
-    .roundtime{
-        text-align:right;
-    }
-    .maintime{
-        font-size: 4vw;
-    }
+#timetable {
+	width: 100%;
+	border-collapse: collapse;
+	border: solid 5px $color_black;
+	td {
+		margin: 0px;
+		border: solid 3px $color_black;
+		padding: 15px 15px 15px 15px;
+	}
+	th {
+		margin: 0px;
+		border: solid 3px $color_black;
+		padding: 5px 15px 5px 15px;
+	}
+	.roundtitle {
+		text-align: left;
+		width: 50%;
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+	.roundtime {
+		margin-top: 20px;
+		text-align: right;
+		font-size: 1.2rem;
+		white-space: nowrap;
+	}
+	.splittime {
+		text-align: center;
+		font-weight: bold;
+		font-size: 0.8rem;
+		width: 22%;
+		white-space: nowrap;
+	}
 }
-.maintime{
-    font-size: 4vw;
+
+.lasttime,
+.personalbest {
+	font-size: 1.2rem;
+	text-align: center;
+	white-space: nowrap;
 }
-.goodsplit{
-    color: $color_green;
+
+#maintimediv {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	.maintime {
+		text-align: right;
+		margin-bottom: 0px;
+	}
+	.roundtime {
+		text-align: right;
+	}
+	.maintime {
+		font-size: 4vw;
+	}
 }
-.badsplit{
-    color: $color_red;
+
+.maintime {
+	font-size: 4vw;
+}
+
+.goodsplit {
+	color: $color_green;
+}
+
+.badsplit {
+	color: $color_red;
 }
 
 .round1button {
-    padding: 15px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    width:200px;
-    margin:25px 25px 25px 25px;
-    border:none;
-    background: none;
-  }
+	padding: 15px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	width: 200px;
+	margin: 25px 25px 25px 25px;
+	border: none;
+	background: none;
+}
 
 .btn {
-    top: 0;
-    left: 0;
-    transition: all .15s linear 0s;
-    position: relative;
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 25px;
-    background-color: $color-yellow;
-    border: 3px solid $color_black;
-    text-transform: uppercase;
-    color: $color_black;
-    font-family: arial;
-    letter-spacing: 1px;
-    box-shadow: 6px 6px 0 $color_black;
-    text-decoration: none;
-    user-select: none;
-    cursor: pointer;
-
-    &:hover {
-      top: 3px;
-      right: -3px;
-      box-shadow: 3px 3px 0 $color_black;
-      
-      &::after {
-        top: 1px;
-        right: -2px;
-  
-      }
-      
-      &::before {
-        bottom: -2px;
-        left: 1px;
-  
-      }
-    }
-    
-    &::after {
-      transition: all .15s linear 0s;
-      content: '';
-      position: absolute;
-      top: 2px;
-      right: -4px;
-      background-color: $color_black;
-      transform: rotate(45deg);
-      z-index: -1;
-      
-    }
-    
-    &::before {
-      transition: all .15s linear 0s;
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 2px;
-      background-color: $color_black;
-      transform: rotate(45deg);
-      z-index: -1;
-    }
-  }
-  
-  a.btn { position: relative; }
-  
-  a:active.btn {
-    top: 6px;
-    right: -6px;
-    box-shadow: none;
-    
-    &:before {
-      bottom: 1px;
-      left: 1px;
-    }
-    
-    &:after {
-      top: 1px;
-      right: 1px;
-    }
-  }
-
-    .type1 {
-        background: $color_red;
-        
-    }
-    .type2{
-        background: $color_green;
-    }
-    .type3{
-        background: $color_grey;
-    }
-    .type4{
-        background: $color_yellow;
-    }
-    .type5{
-        color: $color_red;
-        border: 3px solid $color_red;
-    }
-    .type6{
-        color:$color_green;
-        border: 3px solid $color_green;
-    }
-    .type7{
-        color:$color_grey;
-        border: 2px solid $color_grey;
-    }
-    .type8{
-        color:$color_black;
-        text-decoration: underline;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        user-select: none;
-        cursor: pointer;
-
-
-    }
-    .type9{
-        color:$color_grey;
-        text-decoration: underline;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        user-select: none;
-        cursor: pointer;
-
-    }
-
-  .round1{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 5px 25px 5px 25px;
-
-  }
-
-  .round2{
-      padding: 5px 25px 25px 25px;
-
-  }
-  .next{
-      //font-weight: bold;
-  }
-
-  // Round 2 Css
-  .words{
-      width:70%;
-      line-height: 1.5rem;
-    margin: 15px 0px 15px 15px;
-  }
-
-    input {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-    }
-    // Layout
-    .row {
-    display:flex;
-    width:100%;
-    .col {
-        flex:1;
-        &:last-child {
-        margin-left: 1em;
-        }
-    }
-    }
-    /* Accordion styles */
-    .tabs {
-    overflow: hidden; 
-    width:100%;
-    border: solid 1.5px $color_black;
-    }
-    .tab {
-    border: solid 1.5px $color_black;
-    border-collapse: collapse;
-    width: 100%;
-    color: $color_black;
-    overflow: hidden;
-    //margin:-3px 0 -3px -3px;
-
-    &-label {
-        display: flex;
-        justify-content: space-between;
-        padding: 15px;
-        font-weight: bold;
-        cursor: pointer;
-        /* Icon */
-        &::after {
-        content: "\276F";
-        width: 1em;
-        height: 1em;
-        text-align: center;
-        transition: all .35s;
-        }
-    }
-    &-content {
-        max-height: 0;
-        padding: 0 1em;
-        background: $color_yellow;
-        transition: all .35s;
-    }
-    &-close {
-        display: flex;
-        justify-content: flex-end;
-        padding: 1em;
-        font-size: 0.75em;
-        cursor: pointer;
-    }
-    }
-
-    // :checked
-    input:checked {
-    + .tab-label {
-        &::after {
-        transform: rotate(90deg);
-        }
-    }
-    ~ .tab-content {
-        max-height: 100vh;
-        padding: 0px;
-        padding-bottom: 15px;
-    }
-    }
-
-    .tabItem{
-        display:flex;
-        justify-content: space-between;
-    }
-
-    .tab-label{
-        font-size: 1.4rem;
-    }
-
-    
-#app-cover
-{
-    display: table;
-    width: 600px;
-    margin: 80px auto;
-    counter-reset: button-counter;
+	top: 0;
+	left: 0;
+	transition: all .15s linear 0s;
+	position: relative;
+	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 25px;
+	background-color: $color-yellow;
+	border: 3px solid $color_black;
+	text-transform: uppercase;
+	color: $color_black;
+	font-family: arial;
+	letter-spacing: 1px;
+	box-shadow: 6px 6px 0 $color_black;
+	text-decoration: none;
+	user-select: none;
+	cursor: pointer;
+	&:hover {
+		top: 3px;
+		right: -3px;
+		box-shadow: 3px 3px 0 $color_black;
+		&::after {
+			top: 1px;
+			right: -2px;
+		}
+		&::before {
+			bottom: -2px;
+			left: 1px;
+		}
+	}
+	&::after {
+		transition: all .15s linear 0s;
+		content: '';
+		position: absolute;
+		top: 2px;
+		right: -4px;
+		background-color: $color_black;
+		transform: rotate(45deg);
+		z-index: -1;
+	}
+	&::before {
+		transition: all .15s linear 0s;
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 2px;
+		background-color: $color_black;
+		transform: rotate(45deg);
+		z-index: -1;
+	}
 }
 
-.row
-{
-    display: table-row;
+a.btn {
+	position: relative;
 }
 
-.toggle-button-cover
-{
-    display: table-cell;
-    position: relative;
-    width: 80px;
-    margin:15px;
-    /* height: 140px; */
-    box-sizing: border-box;
+a:active.btn {
+	top: 6px;
+	right: -6px;
+	box-shadow: none;
+	&:before {
+		bottom: 1px;
+		left: 1px;
+	}
+	&:after {
+		top: 1px;
+		right: 1px;
+	}
 }
 
-.button-cover
-{
-
+.type1 {
+	background: $color_red;
 }
 
-.button-cover:before
-{
+.type2 {
+	background: $color_green;
 }
 
-.button-cover, .knobs, .layer
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.type3 {
+	background: $color_grey;
 }
 
-.button
-{
-    position: relative;
-    top: 50%;
-    width: 74px;
-    height: 36px;
-    margin: -20px auto 0 auto;
-    overflow: hidden;
+.type4 {
+	background: $color_yellow;
 }
 
-
-
-.button.b2
-{
+.type5 {
+	color: $color_red;
+	border: 3px solid $color_red;
 }
 
-.checkbox
-{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 3;
+.type6 {
+	color: $color_green;
+	border: 3px solid $color_green;
 }
 
-.knobs
-{
-    z-index: 2;
+.type7 {
+	color: $color_grey;
+	border: 2px solid $color_grey;
 }
 
-.layer
-{
-    width: 100%;
-    background-color: $color_white;
-    transition: 0.3s ease all;
-    z-index: 1;
+.type8 {
+	color: $color_black;
+	text-decoration: underline;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	cursor: pointer;
+}
+
+.type9 {
+	color: $color_grey;
+	text-decoration: underline;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	cursor: pointer;
+}
+
+.round1 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 5px 25px 5px 25px;
+}
+
+.round2 {
+	padding: 5px 25px 25px 25px;
+}
+
+.next {
+	//font-weight: bold;
+} // Round 2 Css
+.words {
+	width: 70%;
+	line-height: 1.5rem;
+	margin: 15px 0px 15px 15px;
+}
+
+input {
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
+} // Layout
+.row {
+	display: flex;
+	width: 100%;
+	.col {
+		flex: 1;
+		&:last-child {
+			margin-left: 1em;
+		}
+	}
+}
+
+/* Accordion styles */
+
+.tabs {
+	overflow: hidden;
+	width: 100%;
+	border: solid 1.5px $color_black;
+}
+
+.tab {
+	border: solid 1.5px $color_black;
+	border-collapse: collapse;
+	width: 100%;
+	color: $color_black;
+	overflow: hidden; //margin:-3px 0 -3px -3px;
+	&-label {
+		display: flex;
+		justify-content: space-between;
+		padding: 15px;
+		font-weight: bold;
+		cursor: pointer;
+		/* Icon */
+		&::after {
+			content: "\276F";
+			width: 1em;
+			height: 1em;
+			text-align: center;
+			transition: all .35s;
+		}
+	}
+	&-content {
+		max-height: 0;
+		padding: 0 1em;
+		background: $color_yellow;
+		transition: all .35s;
+	}
+	&-close {
+		display: flex;
+		justify-content: flex-end;
+		padding: 1em;
+		font-size: 0.75em;
+		cursor: pointer;
+	}
+} // :checked
+input:checked {
+	+.tab-label {
+		&::after {
+			transform: rotate(90deg);
+		}
+	}
+	~.tab-content {
+		max-height: 100vh;
+		padding: 0px;
+		padding-bottom: 15px;
+	}
+}
+
+.tabItem {
+	display: flex;
+	justify-content: space-between;
+}
+
+.tab-label {
+	font-size: 1.4rem;
+}
+
+#app-cover {
+	display: table;
+	width: 600px;
+	margin: 80px auto;
+	counter-reset: button-counter;
+}
+
+.row {
+	display: table-row;
+}
+
+.toggle-button-cover {
+	display: table-cell;
+	position: relative;
+	width: 80px;
+	margin: 15px;
+	/* height: 140px; */
+	box-sizing: border-box;
+}
+
+.button-cover {}
+
+.button-cover:before {}
+
+.button-cover,
+.knobs,
+.layer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.button {
+	position: relative;
+	top: 50%;
+	width: 74px;
+	height: 36px;
+	margin: -20px auto 0 auto;
+	overflow: hidden;
+}
+
+.button.b2 {}
+
+.checkbox {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.knobs {
+	z-index: 2;
+}
+
+.layer {
+	width: 100%;
+	background-color: $color_white;
+	transition: 0.3s ease all;
+	z-index: 1;
 }
 
 /* Button 13 */
-.button-13 .knobs:before, .button-13 .knobs:after, .button-13 .knobs span
-{
-    position: absolute;
-    top: 4px;
-    width: 23px;
-    height: 10px;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1;
-    padding: 9px 4px;
-    transition: 0.3s ease all;
-    border:3px solid $color_black;
-    margin:-3px;
+
+.button-13 .knobs:before,
+.button-13 .knobs:after,
+.button-13 .knobs span {
+	position: absolute;
+	top: 4px;
+	width: 23px;
+	height: 10px;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1;
+	padding: 9px 4px;
+	transition: 0.3s ease all;
+	border: 3px solid $color_black;
+	margin: -3px;
 }
 
-.button-13 .knobs:before, .button-13 .knobs:after
-{
-    color: black;
-    z-index: 1;
+.button-13 .knobs:before,
+.button-13 .knobs:after {
+	color: black;
+	z-index: 1;
 }
 
-.button-13 .knobs:before
-{
-    content: 'YES';
-    left: 4px;
+.button-13 .knobs:before {
+	content: 'YES';
+	left: 4px;
 }
 
-.button-13 .knobs:after
-{
-    content: 'NO';
-    right: 4px;
+.button-13 .knobs:after {
+	content: 'NO';
+	right: 4px;
 }
 
-
-.button-13 .knobs span
-{
-    width: 39px;
-    left: 37px;
-    height: 34px;
-    background-color:$color_green;
-    z-index: 2;
+.button-13 .knobs span {
+	width: 39px;
+	left: 37px;
+	height: 34px;
+	background-color: $color_green;
+	z-index: 2;
 }
 
-.button-13 .checkbox:checked + .knobs span
-{
-    left: 4px;
-    background-color: $color_red;
+.button-13 .checkbox:checked+.knobs span {
+	left: 4px;
+	background-color: $color_red;
 }
 
-.button-13 .checkbox:checked ~ .layer
-{
-   
+.button-13 .checkbox:checked~.layer {}
+
+.endbut {
+	margin-top: 0px;
 }
 
-.endbut{
-    margin-top: 0px;
-}
+@media only screen and (max-width: 700px) {
+    /* For mobile phones: */
+   .content{
+       flex-direction: column;
+       align-items: center;
+       justify-content:center;
+   }
+
+   .sidebar{
+       width:100%;
+       padding: 15px;
+       height:100%;
+       position: relative;
+       .headerbox{
+            margin:0px;
+       }
+       .timerbox{
+            display: none;
+       }
+       .aboutbox{
+            display: none;
+    }
+   }
+   .gamewrapper{
+       width: 100%;
+       padding: 15px;
+       padding-top: 0px;
+
+   }
+
+  }

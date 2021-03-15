@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-size: 1vw;
@@ -135,7 +136,8 @@ h1 {
   white-space: nowrap;
 }
 
-.lasttime, .personalbest {
+.lasttime,
+.personalbest {
   font-size: 1.2rem;
   text-align: center;
   white-space: nowrap;
@@ -504,7 +506,9 @@ input:checked ~ .tab-content {
           box-sizing: border-box;
 }
 
-.button-cover, .knobs, .layer {
+.button-cover,
+.knobs,
+.layer {
   position: absolute;
   top: 0;
   right: 0;
@@ -545,7 +549,9 @@ input:checked ~ .tab-content {
 }
 
 /* Button 13 */
-.button-13 .knobs:before, .button-13 .knobs:after, .button-13 .knobs span {
+.button-13 .knobs:before,
+.button-13 .knobs:after,
+.button-13 .knobs span {
   position: absolute;
   top: 4px;
   width: 23px;
@@ -561,7 +567,8 @@ input:checked ~ .tab-content {
   margin: -3px;
 }
 
-.button-13 .knobs:before, .button-13 .knobs:after {
+.button-13 .knobs:before,
+.button-13 .knobs:after {
   color: black;
   z-index: 1;
 }
@@ -591,5 +598,41 @@ input:checked ~ .tab-content {
 
 .endbut {
   margin-top: 0px;
+}
+
+@media only screen and (max-width: 700px) {
+  /* For mobile phones: */
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+    height: 100%;
+    position: relative;
+  }
+  .sidebar .headerbox {
+    margin: 0px;
+  }
+  .sidebar .timerbox {
+    display: none;
+  }
+  .sidebar .aboutbox {
+    display: none;
+  }
+  .gamewrapper {
+    width: 100%;
+    padding: 15px;
+    padding-top: 0px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
