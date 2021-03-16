@@ -663,6 +663,7 @@ input:checked ~ .tab-content {
   #maintimedivmobile {
     position: fixed;
     bottom: 0px;
+    z-index: 9999;
     width: 100%;
     border: solid 5px #272727;
     background-color: #F3F2EE;

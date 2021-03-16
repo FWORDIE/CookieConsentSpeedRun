@@ -584,6 +584,7 @@ and (max-width: 600px)
     #maintimedivmobile{
         position: fixed;
         bottom:0px;
+        z-index: 9999;
         width: 100%;
         border: solid 5px $color_black;
         background-color: $color_yellow;
