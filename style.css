@@ -636,6 +636,9 @@ input:checked ~ .tab-content {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .maintime {
+    font-size: 3rem;
+  }
   .sidebar {
     width: 100%;
     padding: 15px;
