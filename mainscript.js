@@ -21,6 +21,7 @@ var lastRoundTime = 0;
 var buttons = 12;
 var Going = false;
 var HighScore = false;
+var hintdone = [false,false,false];
 
 
 
@@ -47,24 +48,23 @@ else{
 
 // Round Start
 function start() {
-    if(Going == false){
-    Going = true;
-    lastRoundTime = 0;
-    round = 0;
-    for(let i = 1; i <= 3; i++){
-        document.getElementById('time'+i).textContent = '--:--.--';
-        document.getElementById('split'+i).textContent = '--.--';
-        document.getElementById('split'+i).classList.remove("badsplit");
-        document.getElementById('split'+i).classList.remove("goodsplit");
-    }
-    ms = 0;
-    if(!timer) {
-        timer = setInterval(run, 10);
-    }
-    document.getElementById('Welcome').classList.add("show");
-    loadButtons("Round1Box", "Level 1: Open your cookie preferences", "1");
-
-}
+        if(Going == false){
+        Going = true;
+        lastRoundTime = 0;
+        round = 0;
+        for(let i = 1; i <= 3; i++){
+            document.getElementById('time'+i).textContent = '--:--.--';
+            document.getElementById('split'+i).textContent = '--.--';
+            document.getElementById('split'+i).classList.remove("badsplit");
+            document.getElementById('split'+i).classList.remove("goodsplit");
+        }
+        ms = 0;
+        if(!timer) {
+            timer = setInterval(run, 10);
+        }
+        document.getElementById('Rules').classList.add("show");
+        loadButtons("Round1Box", "Level 1: Open your cookie preferences", "1");
+        }
 }
 
 //Timer Loop
@@ -82,6 +82,10 @@ function run() {
     }
     };
     let rtime = (ms - lastRoundTime);
+    console.log(round);
+    if (rtime == 3000 && !hintdone[round]){
+        Hint(round, 1)
+    }
     roundTime.textContent = getTimer(rtime);
 }
 
@@ -108,7 +112,7 @@ function setsplit(){
     if(split[round] == Infinity){
         eval("round" + round + "Split").textContent = ("N/A");
     } else{
-        console.log("I tried");
+        //console.log("I tried");
         if(lastSplit[round] > split[round]){
             eval("round" + round + "Split").textContent = ("+" + getTimer((lastSplit[round] - split[round]), true)); 
             eval("round" + round + "Split").classList.remove("goodsplit");
@@ -123,20 +127,20 @@ function setsplit(){
 
 // Round 2 Start
 function round2() { 
-    lastRoundTime = ms;
-    lastSplit[round] = ms;
-    setsplit();
-    round ++;
-    Gentoggles();
+        lastRoundTime = ms;
+        lastSplit[round] = ms;
+        setsplit();
+        round ++;
+        Gentoggles();
 }
 
 // Round 3 Start
 function round3() {
-    lastRoundTime = ms;
-    lastSplit[round] = ms - lastSplit[round -1];
-    setsplit();
-    round ++;
-    loadButtons("Round3Box", "Level 3: Save your cookie preferences", "3");
+        lastRoundTime = ms;
+        lastSplit[round] = ms - lastSplit[round -1];
+        setsplit();
+        round ++;
+        loadButtons("Round3Box", "Level 3: Save your cookie preferences", "3");
 }
 
 //Final Split on end
@@ -163,11 +167,28 @@ function end(){
 
 //Finish End
 function stopTimer() {
+    var EndTitle = document.getElementById('EndTitle');
+    var Endnote = document.getElementById('endnote');
+    Endnote.classList.remove('pulse');
     clearInterval(timer);
     timer = false;
     lastTime.textContent = getTimer(ms);
     console.log('ms: ' + ms + '- pBms' + pBms)
     storeHighScore();
+    if(HighScore == true){
+        EndTitle.innerText="New High Score!"
+    } else{
+        EndTitle.innerText="You did it!"
+    }
+    if(ms <= 4500){
+        Endnote.innerText="You were so fast that we are giving you a 10% discount, use code SPEEDRUN45";
+        Endnote.classList.add('pulse');
+
+    } else{
+        Endnote.innerText="p.s. If you get a sub 45sec time, you get a 10% discount on the book";
+    }
+
+
 }
 
 //Store Score if High Score
@@ -225,20 +246,15 @@ function loadButtons(box, title, numb){
     eval('var ButtonProArr = copy.round' + numb + 'Pro;');
     randomArr(ButtonConArr, "round1Arr");
     randomArr(ButtonProArr, "round1Pro");
-    //console.log(round1Pro[0]);
-    // if(numb == "1"){
-    //     var headnumb = Math.floor((Math.random() * copy.Welcome.length) + 1);
-    //     var header = document.createElement("h1");
-    //     header.classList.add('header');
-    //     var randhead = copy.Welcome[headnumb];
-    //     header.innerText = randhead;
-    //     document.getElementById(box).appendChild(header).classList.add("roundHeader");  
-    // } else{
-
-    // };
-    var header = document.createElement("h1");
-    header.innerText = title;
-    document.getElementById(box).appendChild(header).classList.add("roundHeader");
+    if(numb == '1'){
+        var html = '<h1 class="roundHeader">Level 1: Open your cookie preferences</h1>';
+            html += '<p class="subber hint underline" id="Hint0" onclick="Hint(0, 0)">Need a hint?</p>';
+            document.getElementById("Round1Box").innerHTML = html;
+    } else{
+        var html = '<h1 class="roundHeader">Level 3: Save your cookie preferences</h1>';
+            html += '<p class="subber hint underline" id="Hint2" onclick="Hint(2, 0)">Need a hint?</p>';
+            document.getElementById("Round3Box").innerHTML = html;
+    }
     let proNum = Math.floor((Math.random() * buttons-1) + 1);
     console.log(proNum);
     for(let i = 0; i < (buttons); i++ ){
@@ -296,7 +312,8 @@ function Gentoggles(){
     document.getElementById("rd1").checked = true;
     document.getElementById("rd2").checked = false;
     document.getElementById("rd3").checked = false;
-
+    document.getElementById("Hint1").innerHTML = 'Need a hint?';
+    document.getElementById("Hint1").classList.add('underline');
     let alltoggles = document.getElementsByClassName('checkbox');
     for(let q = 0; q < alltoggles.length; q++){
         alltoggles[q].checked = false;
@@ -371,28 +388,46 @@ function resetToggles(num){
             toggle.checked = false;
             console.log('done');
             checkToggles();
+            Hint(1, 2);
         }
     }, 300);
 }
 
 // Round 3
 function restart(){
-    document.getElementById('Finish').classList.add("show");
-    var EndTitle = document.getElementById('EndTitle');
-    if(HighScore == true){
-        EndTitle.innerText="You did it and got new Highscore!"
-        console.log("highscore")
-    }
-    document.getElementById('Round3Box').innerHTML = "";
-    start();
-    HighScore = false; 
-
+        document.getElementById('Finish').classList.add("show");
+        document.getElementById('Round3Box').innerHTML = "";
+        start();
+        HighScore = false; 
+        hintdone = [false,false,false];
 }
 
+function rules(){
+    document.getElementById('Welcome').classList.add("show");
+    document.getElementById('Rules').classList.remove("show");
+}
 
 // Test Code
 function test(){
     Gentoggles();
+}
+
+function Hint(lvlnum, is){
+    let hintNum = Math.floor((Math.random() * 3) );
+    let hintBox = document.getElementById('Hint'+ lvlnum);
+    hintBox.classList.remove('underline');
+    hintdone[lvlnum] = true;
+    if(is == 0){
+        let hinthtml = copy.Hint[lvlnum][hintNum] +". "+ '<span class="underline">Need Another?</span>';
+        hintBox.innerHTML= hinthtml;
+    } else if(is == 1){
+        hintBox.innerHTML = copy.Hint[lvlnum][hintNum]+". "+ '<span class="underline">Need Another?</span>';
+        hintBox.classList.add('pulse');
+
+    } else{
+        hintBox.innerHTML = copy.Hint[lvlnum][1]+". "+ '<span class="underline">Need Another?</span>';
+        hintBox.classList.add('pulse');
+    }
 }
 
 

@@ -612,6 +612,10 @@ input:checked ~ .tab-content {
   background-color: #EB4237;
 }
 
+.endbut {
+  margin-top: 0px;
+}
+
 .mobileonly {
   display: none;
 }
@@ -678,5 +682,44 @@ input:checked ~ .tab-content {
     margin: 0px;
     line-height: 3rem;
   }
+}
+
+.hint {
+  margin-bottom: 25px;
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.pulse {
+  -webkit-animation: pulsate 2s ease-out;
+  -webkit-animation-iteration-count: 1;
+  opacity: 1;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 1.0;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+#endnote {
+  margin-bottom: 25px;
+}
+
+.endtimer {
+  margin-top: 15px;
 }
 /*# sourceMappingURL=style.css.map */

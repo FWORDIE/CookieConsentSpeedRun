@@ -18,7 +18,7 @@
 					<p class="mobileonly">Made by <a class="link" href="https://www.fredwordie.com">Fred Wordie</a> and
 						supported by <a class="link" href="https://www.bigdatagirl.com">Big Data Girl</a>.</p>
 				</div>
-				<div class="sidebox timerbox">
+			<div class="sidebox timerbox">
 					<div id="timediv">
 						<table id="timetable">
 							<tr id="Round1">
@@ -78,13 +78,32 @@
 						p.s. Like all cookie Pop-ups, this is best experienced on desktop.											
 					</span>
 					</p>	
-						<a class="round1button type2 btn" onclick="start()">Start</a>
+						<a class="round1button type2 btn" onclick="rules()">Let's do this</a>
+				</div>
+				<div class="round1 show" id="Rules">
+					<h1 class="roundHeader">The Rules</h1>
+					<p class="subber">
+						Your task is simple, say no to all cookies:
+					</p>
+					<p class="subber">
+						<strong>Level 1:</strong> Find the button that opens your cookie settings
+					</p>
+					<p class="subber">
+						<strong>Level 2:</strong> Toggle off all your cookies in the preferences panel
+					</p>
+					<p class="subber">
+						<strong>Level 3:</strong>  Confirm your choices by saving your settings
+					</p>
+					<p class="subber">
+						p.s. This game uses all the text and tricks of normal cookie consent pop-ups and banners, so don't blame me if it's too hard.
+					</p>
+					<a class="round1button type2 btn" onclick="start()">Start</a>
 				</div>
 				<div class="round1 show" id="Round1Box">
 				</div>
 				<div class="round2 show" id="Round2Box">
-					<h1 class="roundHeader">Level 2: Reject all cookies</h1>
-					<p class="subber">There are <span id="Remaining">0</span>/15 remaining</p>
+					<h1 class="roundHeader">Level 2: Reject all cookies, <span id="Remaining">0</span> left</h1>
+					<p class="subber hint underline" id="Hint1" onclick="Hint(1, 0)">Need a hint?</p>
 					<div class="tabs">
 						<div class="tab">
 							<input id="rd1" name="rd" type="radio"> <label class="tab-label" for="rd1">Marketing</label>
@@ -392,20 +411,14 @@
 					</div>
 				</div>
 				<div class="round1 show" id="Round3Box">
-					<!-- <a class="round1button type1 btn">Accept All 1</a>
-                    <a class="round1button type2 btn">Accept All 2</a>
-                    <a class="round1button type3 btn">Accept All 3</a>
-                    <a class="round1button type4 btn">Accept All 4</a>
-                    <a class="round1button type5 btn">Accept All 5</a>
-                    <a class="round1button type6 btn">Accept All 6</a>
-                    <a class="round1button type7 btn">Accept All 7</a>
-                    <a class="round1button type8 ">Accept All 8</a>
-                    <a class="round1button type9 ">Accept All 9</a> -->
 				</div>
 				<div class="round1 show" id="Finish">
-					<h1 class="maintime" id="EndUnder"><span id="finalTime"></span></h1>
-					<h1 class="roundHeader" id="EndTitle">You did it! I can tell you really care about your privacy.</h1>
+					<h1 class="roundHeader" id="EndTitle"></h1>
+					<h1 class="maintime endtimer" id="EndUnder"><span id="finalTime"></span></h1>
+					<p class="subber" >You did it! I can tell you really care about your privacy.</p>
+					<p class="subber" id="endnote"></p>
 					<a class="round1button type2 btn endbut" onclick="restart()">Have another go</a>
+					<a class="round1button type3 btn endbut" href="https://www.bigdatagirl.com">Get the Book</a>
 				</div>
 			</div>
 		</div>
