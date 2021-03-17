@@ -82,7 +82,7 @@ function run() {
     }
     };
     let rtime = (ms - lastRoundTime);
-    console.log(round);
+    //console.log(round);
     if (rtime == 3000 && !hintdone[round]){
         Hint(round, 1)
     }
@@ -366,6 +366,8 @@ function Gentoggles(){
 var toggleNum = document.getElementById("Remaining");
 
 function checkToggles(){
+    var toggleNum = document.getElementById("Remaining");
+
     var toggletot = togglepro.length + togglecon.length;
     var toggleproRight = document.querySelectorAll('input[name=toggle]:checked').length;
     var toggleconWrong = togglecon.length - document.querySelectorAll('input[name=antitoggle]:checked').length;
