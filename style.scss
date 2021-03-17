@@ -56,7 +56,6 @@ p {
 	padding: 25px 25px 25px 50px;
 	.sidebox {
 		border: 5px solid $color_black;
-		background: $color_yellow;
 		margin: 25px 0 25px 0;
 	}
 	.headerbox {
@@ -65,7 +64,10 @@ p {
 	}
 	.timerbox {
 		border: none;
+		background-color: none;
 	}
+
+
 }
 
 h1 {
@@ -111,6 +113,7 @@ h1 {
 	width: 100%;
 	border-collapse: collapse;
 	border: solid 5px $color_black;
+	background: $color_yellow;
 	td {
 		margin: 0px;
 		border: solid 3px $color_black;
@@ -163,6 +166,10 @@ h1 {
 	.maintime {
 		font-size: 4vw;
 	}
+}
+
+.aboutbox{
+	background: $color_yellow;
 }
 
 .maintime {
