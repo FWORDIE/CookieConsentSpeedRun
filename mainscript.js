@@ -30,10 +30,10 @@ var hintdone = [false,false,false];
 for (let i = 0; i < split.length; i++){
     if(sessionStorage.getItem("split" + i +"Local") === null){
         split[i] = Infinity; 
-        console.log(split);
+        // console.log(split);
     } else{
         split[i] = sessionStorage.getItem("split" + i +"Local");
-        console.log(split);
+        // console.log(split);
     }
 }
 
@@ -82,7 +82,7 @@ function run() {
     }
     };
     let rtime = (ms - lastRoundTime);
-    //console.log(round);
+    //// console.log(round);
     if (rtime == 3000 && !hintdone[round]){
         Hint(round, 1)
     }
@@ -112,7 +112,7 @@ function setsplit(){
     if(split[round] == Infinity){
         eval("round" + round + "Split").textContent = ("N/A");
     } else{
-        //console.log("I tried");
+        //// console.log("I tried");
         if(lastSplit[round] > split[round]){
             eval("round" + round + "Split").textContent = ("+" + getTimer((lastSplit[round] - split[round]), true)); 
             eval("round" + round + "Split").classList.remove("goodsplit");
@@ -173,7 +173,7 @@ function stopTimer() {
     clearInterval(timer);
     timer = false;
     lastTime.textContent = getTimer(ms);
-    console.log('ms: ' + ms + '- pBms' + pBms)
+    // console.log('ms: ' + ms + '- pBms' + pBms)
     storeHighScore();
     if(HighScore == true){
         EndTitle.innerText="New High Score!"
@@ -211,7 +211,7 @@ function clearStorage(){
 }
 
 //Import Copy
-console.log(copy.round1Con[0]);
+// console.log(copy.round1Con[0]);
 
 //Round 1 ----
 
@@ -223,7 +223,7 @@ function randomArr(round , name){
         eval(name).push(i);
     }
     shuffle(eval(name));
-    //console.log(eval(name));
+    //// console.log(eval(name));
 }
 
 function shuffle(a) {
@@ -256,7 +256,7 @@ function loadButtons(box, title, numb){
             document.getElementById("Round3Box").innerHTML = html;
     }
     let proNum = Math.floor((Math.random() * buttons-1) + 1);
-    console.log(proNum);
+    // console.log(proNum);
     for(let i = 0; i < (buttons); i++ ){
         if(i == proNum){
             var btn = document.createElement("a");
@@ -296,7 +296,7 @@ function loadButtons(box, title, numb){
 }
 
 function wrong(){
-    console.log('wrong');
+    // console.log('wrong');
     var wrongNum = Math.floor((Math.random() * copy.wrong.length -1) + 1);
     this.innerText = copy.wrong[wrongNum];
 }
@@ -374,7 +374,7 @@ function checkToggles(){
     var toggleCorrect = toggleproRight + toggleconWrong;
     toggleCount = toggletot- toggleCorrect;
     toggleNum.innerHTML = toggleCount;
-    console.log(toggleCount);
+    // console.log(toggleCount);
     if(toggleCount == 0){
         console.log("Round Over");
         document.getElementById("Round2Box").classList.add("show");
@@ -388,7 +388,7 @@ function resetToggles(num){
         for(let i = 1; i <=6; i++){
             let toggle = document.getElementById("btn_"+ num +"_"+ i);
             toggle.checked = false;
-            console.log('done');
+            // console.log('done');
             checkToggles();
             Hint(1, 2);
         }

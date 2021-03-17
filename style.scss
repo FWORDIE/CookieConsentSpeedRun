@@ -361,11 +361,12 @@ input {
 .tabs {
 	overflow: hidden;
 	width: 100%;
-	border: solid 1.5px $color_black;
+	border: solid 3px $color_black;
 }
 
 .tab {
-	border: solid 1.5px $color_black;
+	border: solid 0px $color_black;
+	border-width: 0 0 3px 0px;
 	border-collapse: collapse;
 	width: 100%;
 	color: $color_black;
@@ -399,6 +400,11 @@ input {
 		cursor: pointer;
 	}
 } // :checked
+
+.tab:last-of-type{
+	border-width: 0 0 0px 0px;
+
+}
 input:checked {
 	+.tab-label {
 		&::after {
