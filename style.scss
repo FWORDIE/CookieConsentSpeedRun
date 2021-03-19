@@ -405,6 +405,7 @@ input {
 	border-width: 0 0 0px 0px;
 
 }
+
 input:checked {
 	+.tab-label {
 		&::after {
