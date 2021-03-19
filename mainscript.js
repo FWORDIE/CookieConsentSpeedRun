@@ -181,7 +181,7 @@ function stopTimer() {
         EndTitle.innerText="You did it!"
     }
     if(ms <= 4500){
-        Endnote.innerText="You were so fast that we are giving you a 10% discount, use code SPEEDRUN45";
+        Endnote.innerText="You were so fast that we are giving you a 10% discount on the hardcover, use code SPEEDRUN45";
         Endnote.classList.add('pulse');
 
     } else{
